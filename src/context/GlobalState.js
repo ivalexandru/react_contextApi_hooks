@@ -12,10 +12,11 @@ export const GlobalContext = createContext(initialState);
 
 //PROVIDER component (we'll wrap all of our components
 // (ele sunt 'children' ) from App.js in this component)
+// AppReducer == numele fisierului in care ai reducerul   
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  //actions:
+  //actions(sent to the reducer):
   function deleteTransaction(id) {
     dispatch({
       type: "DELETE_TRANSACTION",

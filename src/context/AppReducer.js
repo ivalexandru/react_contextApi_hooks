@@ -1,4 +1,5 @@
-// a reducer is how we specify the app state changes in res to certain actions to our context
+// a reducer is how we specify the app state changes in response to certain actions to our context
+
 export default (state, action) => {
   switch (action.type) {
     case "DELETE_TRANSACTION":

@@ -5,7 +5,7 @@ export const Balance = () => {
   const { transactions } = useContext(GlobalContext);
 
   const amounts = transactions.map((transaction) => transaction.amount);
-  //totalul, cu 2 decimale:
+  // toFixed(2)  == totalul, cu 2 decimale:
   const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
   return (
